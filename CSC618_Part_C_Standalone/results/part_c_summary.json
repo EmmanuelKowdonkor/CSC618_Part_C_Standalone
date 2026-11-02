@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "dataset": "cranfield",
+    "documents": 1400,
+    "queries": 225,
+    "qrels": 1837,
+    "top_k": 10,
+    "positive_grade_threshold": 1,
+    "tfidf": "scikit-learn L2 cosine, smooth IDF, unigrams",
+    "bm25": "k1=1.2, b=0.75, Robertson probabilistic IDF",
+    "language_model": "query likelihood, Dirichlet mu=1000",
+    "metrics": "P/R/F1 at 10, P@3, AP@10, RR@10, nDCG@10; macro means"
+  },
+  "aggregate": {
+    "TF-IDF": {
+      "Precision": 0.22844444444444445,
+      "Recall": 0.3770856002919986,
+      "F1": 0.25677292327255413,
+      "P3": 0.34518518518518515,
+      "nDCG10": 0.28125611439561454,
+      "MAP@10": 0.22418744874877117,
+      "MRR@10": 0.5045520282186949
+    },
+    "BM25": {
+      "Precision": 0.22577777777777777,
+      "Recall": 0.37847673847957647,
+      "F1": 0.25590302185890296,
+      "P3": 0.33925925925925926,
+      "nDCG10": 0.2846832203553281,
+      "MAP@10": 0.2229387285400308,
+      "MRR@10": 0.49917989417989417
+    },
+    "LM-Dirichlet": {
+      "Precision": 0.20666666666666667,
+      "Recall": 0.35799428774222375,
+      "F1": 0.23693358087315564,
+      "P3": 0.31407407407407406,
+      "nDCG10": 0.2638151102217535,
+      "MAP@10": 0.204042087575468,
+      "MRR@10": 0.47785185185185186
+    }
+  }
+}
